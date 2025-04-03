@@ -15,23 +15,50 @@
         <Button Text="Adicionar Cliente"
                         Command="{Binding AddCommand}"/>
 
-        <CollectionView ItemsSource="{Binding ClientsView}">
-            <CollectionView.ItemTemplate>
+        <Grid Margin="0,40,0,0" Padding="10" BackgroundColor="LightGreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ID" Grid.Column="0" HorizontalOptions="Center" TextColor="Black"/>
+            <Label Text="Nome" Grid.Column="1" HorizontalOptions="Center" TextColor="Black"/>
+            <Label Text="Idade" Grid.Column="2" HorizontalOptions="Center" TextColor="Black"/>
+            <Label Text="Endereço" Grid.Column="3" HorizontalOptions="Center" TextColor="Black"/>
+            <Label Text="Ação" Grid.Column="4" HorizontalOptions="Center" TextColor="Black"/>
+        </Grid>
+ 
+        <ListView ItemsSource="{Binding ClientsView}">
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10">
-                        <Label Text="{Binding Name}"
-                                                       FontSize="20"
-                                                       FontAttributes="Bold"/>
-                        <Label Text="{Binding Address}"
-                                                       FontSize="16"/>
-                        <Label Text="{Binding Age}"
-                                                       FontSize="16"/>
-                        <Button Text="Remover"
-        Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoveCommand}"
-        CommandParameter="{Binding}"/>
-                    </StackLayout>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Id}" Grid.Column="0" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Name}" Grid.Column="1" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Age}" Grid.Column="2" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Address}" Grid.Column="3" HorizontalOptions="Center"/>
+                            <Button Text="Remover" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoveCommand}"
+                                    CommandParameter="{Binding}"
+                                    Grid.Column="4"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    HorizontalOptions="Center"/>
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
