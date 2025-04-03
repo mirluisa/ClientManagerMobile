@@ -1,25 +1,18 @@
-﻿namespace ClientManagerMobile
+﻿using Microsoft.Extensions.DependencyInjection;
+using ClientManagerMobile.ViewModels;
+
+namespace ClientManagerMobile.Views;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        int count = 0;
-
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
+        InitializeComponent();
     }
 
+    private async void OnNavigateToClients(object sender, EventArgs e)
+    {
+        var clientViewModel = MauiProgram.Services.GetRequiredService<ClientViewModel>();
+        await Navigation.PushAsync(new ClientPage(clientViewModel));
+    }
 }
