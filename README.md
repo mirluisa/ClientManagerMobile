@@ -9,20 +9,20 @@ O repositório contém o projeto de um aplicativo desenvolvido com o objetivo de
 O aplicativo busca auxiliar no gerenciamento de clientes, podendo ser adaptado para outros contextos, como no gerenciamento de alunos, funcionários, etc. Além disso, o projeto pode ser modificado para executar funcionalidades adicionais, como edição de dados, armazenamento de informações, restaurar dados apagados, cálculos financeiros, etc.   
 
 <h1>Tópicos</h1>
-As imagens abaixo ilustram o aplicativo em pleno funcionamento:\ 
+As imagens abaixo ilustram o aplicativo em pleno funcionamento:  
 
 
 
-![Tela de cadastro dos clientes](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(1).png)\
+![Tela de cadastro dos clientes](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(1).png)  
 
 
-![Tela de cadastro dos clientes](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(2).png)\
+![Tela de cadastro dos clientes](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(2).png)  
 
 
-![Retorno sobre a ação de adicionar cliente](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(3).png)\
+![Retorno sobre a ação de adicionar cliente](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(3).png)  
 
 
-![Retorno sobre a ação de deletar cliente](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(4).png)\
+![Retorno sobre a ação de deletar cliente](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(4).png)  
 
 
 
