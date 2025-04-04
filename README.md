@@ -11,7 +11,7 @@ O aplicativo busca auxiliar no gerenciamento de clientes, podendo ser adaptado p
 <h1>Tópicos</h1>
 As imagens abaixo ilustram o aplicativo em pleno funcionamento:
 
-![Página inicial]([URL_da_Imagem](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(1).png))
+![Página inicial](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(1).png)
 
 
 
