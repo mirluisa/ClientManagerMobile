@@ -7,8 +7,9 @@ namespace ClientManagerMobile.ViewModels;
 
 public class ClientViewModel : ViewModelBase
 {
-    public ClientViewModel(ClientService clientService)
+    public ClientViewModel(ClientService clientService, IDialogService dialogService)
     {
+        _dialogService = dialogService;
         _clientService = clientService;
         LoadClients();
 
@@ -66,9 +67,19 @@ public class ClientViewModel : ViewModelBase
         ClientsView = new ObservableCollection<Client>(_clientService.GetClients());
     }
 
-    private void AddEvent()
+    private async void AddEvent()
     {
-        if (string.IsNullOrWhiteSpace(NameView)) { return; }
+        if (string.IsNullOrWhiteSpace(NameView))
+        {
+            await _dialogService.ShowAlertAsync("Erro", "Nome é obrigatório!", "OK");
+            return;
+        }
+
+        if (AgeView <= 0)
+        {
+            await _dialogService.ShowAlertAsync("Erro", "Idade inválida!", "OK");
+            return;
+        }
 
         Client new_client = new Client();
         new_client.Id = ClientsView.Count + 1;
@@ -82,17 +93,22 @@ public class ClientViewModel : ViewModelBase
         AgeView = 0;
         NameView = string.Empty;
         AddressView = string.Empty;
+
+        await _dialogService.ShowAlertAsync("Sucesso", "Cliente adicionado!", "OK");
     }
 
-    private void RemoveEvent(Client client)
+    private async void RemoveEvent(Client client)
     {
         if (client != null)
         {
             _clientService.Delete(client.Id);
             ClientsView.Remove(client);
+            await _dialogService.ShowAlertAsync("Sucesso", "Cliente removido!", "OK");
         }
+
     }
 
+    // TODO: Implementar o update do cliente na View
     private void UpdateEvent(Client client)
     {
         if (client != null)
@@ -107,4 +123,5 @@ public class ClientViewModel : ViewModelBase
     private string _addressView = string.Empty;
     private ObservableCollection<Client> _clientsView = new();
     private readonly ClientService _clientService;
+    private readonly IDialogService _dialogService;
 }

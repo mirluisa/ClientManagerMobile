@@ -7,7 +7,7 @@ namespace ClientManagerMobile;
 
 public static class MauiProgram
 {
-    public static IServiceProvider Services { get; private set; }
+    public static IServiceProvider? Services { get; private set; }
 
     public static MauiApp CreateMauiApp()
     {
@@ -20,7 +20,7 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
-        
+        builder.Services.AddSingleton<IDialogService, DialogService>();
         builder.Services.AddSingleton<ClientService>();
         builder.Services.AddSingleton<ClientViewModel>();
         builder.Services.AddTransient<ClientPage>();
