@@ -9,7 +9,7 @@ O repositório contém o projeto de um aplicativo desenvolvido com o objetivo de
 O aplicativo busca auxiliar no gerenciamento de clientes, podendo ser adaptado para outros contextos, como no gerenciamento de alunos, funcionários, etc. Além disso, o projeto pode ser modificado para executar funcionalidades adicionais, como edição de dados, armazenamento de informações, restaurar dados apagados, cálculos financeiros, etc.   
 
 <h1>Tópicos</h1>
-As imagens abaixo ilustram o aplicativo em pleno funcionamento:  
+As imagens abaixo ilustram o aplicativo em pleno funcionamento:<br/>
 
 
 
