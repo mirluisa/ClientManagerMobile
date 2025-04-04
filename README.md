@@ -13,12 +13,18 @@ As imagens abaixo ilustram o aplicativo em pleno funcionamento:
 
 
 
-<img src="https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(1).png" width="20" 
+![Tela de cadastro dos clientes](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(1).png)
 
 
 ![Tela de cadastro dos clientes](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(2).png)
 
 
-![Tela de cadastro dos clientes](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(2).png)
+![Retorno sobre a ação de adicionar cliente](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(3).png)
+
+
+![Retorno sobre a ação de deletar cliente](https://github.com/mirluisa/ClientManagerMobile/blob/main/Screenshots/Captura%20de%20Tela%20(4).png)
+
+
+
 
 
